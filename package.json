@@ -2,17 +2,23 @@
   "name": "pancakebank",
   "packageManager": "yarn@4.5.3",
   "dependencies": {
-    "discord.js": "^14.16.3"
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7"
   },
   "scripts": {
-    "prettier:check": "yarn prettier . --check",
-    "prettier:write": "yarn prettier . --write"
+    "linter:check": "eslint",
+    "linter:fix": "eslint --fix",
+    "prettier:check": "prettier . --check",
+    "prettier:write": "prettier . --write",
+    "lp:check": "echo '🔍 Rodando ESLint...' && eslint && echo '✨ Rodando Prettier...' && prettier . --check",
+    "lp:fix": "echo '🔧 Corrigindo com ESLint...' && eslint --fix && echo '🛠️ Formatando com Prettier...' && prettier . --write"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.13.0",
+    "jest": "^29.7.0",
     "prettier": "^3.4.2"
   }
 }

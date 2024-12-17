@@ -51,4 +51,7 @@ export default [
     },
   },
   eslintConfigPrettier,
+  {
+    ignores: [".pnp.*", "node_modules", ".yarn"],
+  },
 ];
