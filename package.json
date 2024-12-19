@@ -10,8 +10,8 @@
     "linter:fix": "eslint --fix",
     "prettier:check": "prettier . --check",
     "prettier:write": "prettier . --write",
-    "lp:check": "echo '🔍 Rodando ESLint...' && eslint && echo '✨ Rodando Prettier...' && prettier . --check",
-    "lp:fix": "echo '🔧 Corrigindo com ESLint...' && eslint --fix && echo '🛠️ Formatando com Prettier...' && prettier . --write"
+    "lp:check": "echo '🔍 Rodando ESLint...' && yarn run linter:check || echo '❌ Erro no ESLint . . .\n' && echo '✨ Rodando Prettier...' && yarn run prettier:check",
+    "lp:fix": "echo '🔧 Corrigindo com ESLint...' && yarn run linter:fix || echo '❌ Erro no ESLint . . .\n' && echo '🛠️ Formatando com Prettier...' && yarn run prettier:write"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -22,6 +22,7 @@
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.13.0",
     "jest": "^29.7.0",
+    "onchange": "^7.1.0",
     "prettier": "^3.4.2"
   }
 }

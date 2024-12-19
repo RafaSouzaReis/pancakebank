@@ -1,6 +1,7 @@
-export default{
-  transform:{
-    '^.+\\.js$': 'babel-jest',
+export default {
+  transform: {
+    "^.+\\.js$": "babel-jest",
   },
-  testEnvironment: 'node',
+  testEnvironment: "node",
+  moduleDirectories: ["node_modules", "src"],
 };
